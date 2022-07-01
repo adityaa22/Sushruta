@@ -8,6 +8,7 @@ import RegisterDoctor from './Components/RegisterDoctor/RegisterDoctor';
 import UserHomepage from './Components/HomePage/UserHomepage/UserHomepage';
 import Admin from './Components/Admin/Admin';
 import DoctorHomepage from './Components/HomePage/DoctorHomepage/DoctorHomepage';
+import SearchDoctor from './Components/HomePage/UserHomepage/SearchDoctor';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             <Route path="/user-homepage" element={<UserHomepage />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/doctor-homepage" element={<DoctorHomepage />} />
+            <Route path="/search-doctors" element={<SearchDoctor />} />
           </Routes>
         </Router>
     </div>

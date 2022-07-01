@@ -9,6 +9,7 @@ const userHomepageRouter = require('./routers/userHomepage.route')
 const adminRouter = require('./routers/Admin.route')
 const doctorHomepageRouter = require('./routers/DoctorHomepage.route')
 const adminVerifyRouter = require('./routers/Admin.verify.route')
+const SearchDoctor = require('./routers/SearchDoctor.route')
 
 dotenv.config()
 const app = express();
@@ -21,7 +22,8 @@ app.use('/register-doctor', registerDoctorRouter)
 app.use('/user-homepage',userHomepageRouter)
 app.use('/admin', adminRouter)
 app.use('/doctor-homepage', doctorHomepageRouter)
-app.use('/admin-verify',adminVerifyRouter)
+app.use('/admin-verify', adminVerifyRouter)
+app.use('/search-doctors', SearchDoctor)
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true

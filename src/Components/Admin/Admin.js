@@ -4,7 +4,6 @@ import './Admin.css'
 import axios from "axios"
 
 
-
 const Admin = () => {
     const [unverifiedDoctors, setunverifiedDoctors] = useState([])
     
@@ -23,7 +22,10 @@ const Admin = () => {
     // },[unverifiedDoctors]) 
     return (
         <>
+            <div className="container">
+            <h1>Unverified Doctors</h1>
             <div className="Admin">
+                
                 <div className="List">
                    {
                         unverifiedDoctors.map((val) => {
@@ -46,6 +48,8 @@ const Admin = () => {
                    }
                 </div>
            </div>
+            </div>
+            
            
         </>
     )

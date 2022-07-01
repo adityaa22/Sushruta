@@ -1,12 +1,4 @@
-.container{
-  display: flex;
-  align-items: center;
-    flex-direction: column;
-    height: 100%;
-}
-
-
-.Admin {
+.Search {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -28,4 +20,12 @@
     
   justify-content: center; 
   /* flex-flow: row wrap; */
+}
+.search {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+.search > button{
+    margin-left: 10px;
 }
