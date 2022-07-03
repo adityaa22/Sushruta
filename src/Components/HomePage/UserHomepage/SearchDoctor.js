@@ -3,8 +3,14 @@ import axios from "axios"
 import { TextField, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import "./SearchDoctor.css"
 import SearchCard from "./SearchCard";
+import { useLocation } from "react-router-dom";
 
 const SearchDoctor = () => {
+    const location = useLocation()
+    // console.log(location.state)
+    const username=location.state.name
+    const useremail=location.state.email
+    const userID=location.state.id
     const [doctorList, setDoctorList] = useState([])
     useEffect(() => {
         axios.post("http://localhost:9002/search-doctors", {key : "Verified"})
@@ -78,10 +84,15 @@ const SearchDoctor = () => {
                                 <>
                                     <SearchCard 
                                         key={val._id}
+                                        id={val._id}
                                         fname={val.fname}
                                         lname={val.lname}
                                         specialization={val.specialization}
                                         city={val.city}
+                                        email={val.email}
+                                        username={username}
+                                        useremail={useremail}
+                                        userID={userID}
                                     />
                                 </>
                             )

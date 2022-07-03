@@ -1,0 +1,21 @@
+.infoDoctor{
+    width: 92%;
+    text-align: left;
+    align-items: center;
+    text-align: start;
+    cursor: default;
+}
+.infoCard{
+    width: 600px;
+    background: #fff;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    /* justify-content: center; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}

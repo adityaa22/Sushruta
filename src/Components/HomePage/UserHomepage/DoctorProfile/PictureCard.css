@@ -1,0 +1,28 @@
+.pictureCard{
+    width: 250px;
+    height: 270px;
+    background: #fff;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+.picBox{
+    height:70%;
+    width:100%;
+    display: contents;
+}
+img {
+    float: none;
+    margin: 10px auto;
+    width: 70%;
+    height: 70%;
+    -webkit-border-radius: 50%!important;
+    -moz-border-radius: 50%!important;
+    border-radius: 50%!important
+}
