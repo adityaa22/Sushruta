@@ -10,7 +10,7 @@ const doctorSchema = new mongoose.Schema({
     specialization: String,
     city: String,
     status: String,
-    appontmentRequest: {
+    appointmentRequest: {
         type: Array,
         "default": []
     }

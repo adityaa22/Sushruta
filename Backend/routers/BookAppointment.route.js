@@ -14,7 +14,7 @@ router.route('/').post((req, res) => {
     // console.log(date)
     var update = { name: username, email: useremail, description: description, date: date }
     
-    Doctor.findOneAndUpdate({ _id: id }, { $push: { appontmentRequest: update } },{ new:true }).
+    Doctor.findOneAndUpdate({ _id: id }, { $push: { appointmentRequest: update } },{ new:true }).
         then(result => {
             res.send({
                 message: "Request Sent!! Please wait for response from your Doctor"
