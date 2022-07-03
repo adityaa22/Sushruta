@@ -10,6 +10,10 @@ const doctorSchema = new mongoose.Schema({
     specialization: String,
     city: String,
     status: String,
+    appontmentRequest: {
+        type: Array,
+        "default": []
+    }
     // imageID:
     // {
     //     data: Buffer,
