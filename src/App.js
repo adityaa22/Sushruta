@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+
 import Login from './Components/Login/Login';
 import RegisterPatient from './Components/RegisterPatient/RegisterPatient';
 import Register from './Components/Register/Register';
@@ -9,6 +10,7 @@ import UserHomepage from './Components/HomePage/UserHomepage/UserHomepage';
 import Admin from './Components/Admin/Admin';
 import DoctorHomepage from './Components/HomePage/DoctorHomepage/DoctorHomepage';
 import SearchDoctor from './Components/HomePage/UserHomepage/SearchDoctor';
+import DoctorProfile from './Components/HomePage/UserHomepage/DoctorProfile/DoctorProfile';
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
             <Route path="/admin" element={<Admin />} />
             <Route path="/doctor-homepage" element={<DoctorHomepage />} />
             <Route path="/search-doctors" element={<SearchDoctor />} />
+            <Route path="/doctor-profile" element={<DoctorProfile />} />
           </Routes>
         </Router>
     </div>
