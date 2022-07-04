@@ -6,7 +6,7 @@ import axios from "axios"
 const DoctorHomepage =  () => {
     
     const navigate = useNavigate();
-    const acAppoint = () =>  navigate("/active-appointments")
+    const AppointReq = () =>  navigate("/appointment-request")
     const prevAppoint = () => navigate("/prev-appointments")
 
     const [id, setId] = useState();
@@ -35,7 +35,7 @@ const DoctorHomepage =  () => {
             <>
                 <div className="DoctorHomepage">
                     <h1>Welcome {Name}</h1>
-                    <div className="button" onClick={acAppoint}>Check Active appointments</div>
+                    <div className="button" onClick={AppointReq}>Check Appointment Requests</div>
                     <div>or</div>
                     <div className="button" onClick={prevAppoint}>Check Previous appointments</div>
                 </div>

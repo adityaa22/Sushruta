@@ -11,6 +11,7 @@ import Admin from './Components/Admin/Admin';
 import DoctorHomepage from './Components/HomePage/DoctorHomepage/DoctorHomepage';
 import SearchDoctor from './Components/HomePage/UserHomepage/SearchDoctor';
 import DoctorProfile from './Components/HomePage/UserHomepage/DoctorProfile/DoctorProfile';
+import AppointmentRequest from './Components/HomePage/DoctorHomepage/AppointmentRequest';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/doctor-homepage" element={<DoctorHomepage />} />
             <Route path="/search-doctors" element={<SearchDoctor />} />
             <Route path="/doctor-profile" element={<DoctorProfile />} />
+            <Route path='/appointment-request' element={<AppointmentRequest />} />
           </Routes>
         </Router>
     </div>

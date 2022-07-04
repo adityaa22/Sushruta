@@ -11,6 +11,7 @@ const doctorHomepageRouter = require('./routers/DoctorHomepage.route')
 const adminVerifyRouter = require('./routers/Admin.verify.route')
 const SearchDoctor = require('./routers/SearchDoctor.route')
 const BookAppointment = require('./routers/BookAppointment.route')
+const AppointmentRequest = require('./routers/AppointmentRequest.route')
 
 dotenv.config()
 const app = express();
@@ -26,6 +27,7 @@ app.use('/doctor-homepage', doctorHomepageRouter)
 app.use('/admin-verify', adminVerifyRouter)
 app.use('/search-doctors', SearchDoctor)
 app.use('/Book-appointment',BookAppointment)
+app.use('/appointment-request',AppointmentRequest)
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
