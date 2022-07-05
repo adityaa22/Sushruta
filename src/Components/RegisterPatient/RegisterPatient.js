@@ -23,7 +23,7 @@ const RegisterPatient = () => {
         const { name, email, password, reEnterPassword } = user
         if (name && email && password  && (password===reEnterPassword)) {
             axios.post("http://localhost:9002/register-patient", user)
-            .then ( res =>  console.log(res))
+            .then ( res => alert(res.data.message))
         } 
     }
     const log = () => navigate("/Login")

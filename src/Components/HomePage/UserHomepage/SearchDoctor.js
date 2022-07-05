@@ -64,7 +64,7 @@ const SearchDoctor = () => {
                             value={inputText}
                         />
                         <button > Search </button>
-                        <FormControl style={{ width: '10%', position:"absolute", marginLeft:"380px"}}>
+                        <FormControl style={{ width: '15%', position:"absolute", marginLeft:"500px"}}>
                             <InputLabel>Filter</InputLabel>
                                 <Select
                                     label="Filter"
@@ -77,8 +77,8 @@ const SearchDoctor = () => {
                         </FormControl>
                     </div>
                     
-                </div>
-                {
+                
+                   {
                         filteredData.map((val) => {
                             return (
                                 <>
@@ -98,6 +98,7 @@ const SearchDoctor = () => {
                             )
                         })
                     }
+                </div>
            </div>
         </>
     )

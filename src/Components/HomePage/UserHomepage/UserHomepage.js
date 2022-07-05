@@ -8,6 +8,7 @@ const UserHomepage = () => {
     const navigate = useNavigate();
     const acAppoint = () =>  navigate("/active-appointments")
     const prevAppoint = () => navigate("/prev-appointments")
+    const notifications = () => navigate("/notifications")
     const [id, setId] = useState();
     
     const [Name, setName] = useState();
@@ -35,6 +36,8 @@ return (
             <div className="button" onClick={prevAppoint}>Check Previous appointments</div>
             <div>or</div>  
             <div className="button" onClick={() => { search() }}>Search Doctors</div>
+            <div>or</div>  
+            <div className="button" onClick={notifications}>Notifications</div>
         </div>
         </>
     )
