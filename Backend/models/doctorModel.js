@@ -13,7 +13,15 @@ const doctorSchema = new mongoose.Schema({
     appointmentRequest: {
         type: Array,
         "default": []
-    }
+    },
+    activeAppointment: {
+        type: Array,
+        "default": []
+    },
+    previousAppointment: {
+        type: Array,
+        "default": []
+    },
     // imageID:
     // {
     //     data: Buffer,
