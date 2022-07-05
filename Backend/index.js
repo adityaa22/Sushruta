@@ -2,6 +2,8 @@ const express = require("express")
 const cors = require("cors")
 const dotenv = require("dotenv")
 const mongoose = require("mongoose");
+
+
 const loginRouter = require('./routers/Login.route')
 const registerPatientRouter = require('./routers/registerPatient.route')
 const registerDoctorRouter = require('./routers/registerDoctor.route')
@@ -12,12 +14,18 @@ const adminVerifyRouter = require('./routers/Admin.verify.route')
 const SearchDoctor = require('./routers/SearchDoctor.route')
 const BookAppointment = require('./routers/BookAppointment.route')
 const AppointmentRequest = require('./routers/AppointmentRequest.route')
+const AcceptRequest = require('./routers/AcceptRequest.route')
+const ActiveAppointmentUser = require('./routers/ActiveAppointmentUser.route')
+// const RejectRequest = require('./routers/RejectRequest.route')
+
 
 dotenv.config()
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(cors());
+
+
 app.use('/Login', loginRouter)
 app.use('/register-patient',registerPatientRouter)
 app.use('/register-doctor', registerDoctorRouter)
@@ -28,6 +36,11 @@ app.use('/admin-verify', adminVerifyRouter)
 app.use('/search-doctors', SearchDoctor)
 app.use('/Book-appointment',BookAppointment)
 app.use('/appointment-request',AppointmentRequest)
+app.use('/accept-request',AcceptRequest)
+app.use('/active-appointment-user',ActiveAppointmentUser)
+// app.use('/reject-request',RejectRequest)
+
+
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true

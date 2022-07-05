@@ -25,10 +25,12 @@ const AppointmentRequest = () => {
             <div className="AppointmentRequest">
                 <div className="List">
                     {
-                        appointmentList.map((val) => {
+                        appointmentList.map((val,index) => {
                             return (
                                 <>
-                                <AppointmentRequestCard
+                                    <AppointmentRequestCard
+                                    docID={id}
+                                    num={index}
                                     name = {val.name}
                                     email = {val.email}
                                     description = {val.description}
@@ -41,6 +43,7 @@ const AppointmentRequest = () => {
                     
                 </div>
             </div>
+            
         </>
     )
 }
