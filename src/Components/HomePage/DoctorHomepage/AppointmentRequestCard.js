@@ -70,7 +70,8 @@ const AppointmentRequestCard = (props) => {
                 </div>
                 <div id ={ACID} className="AC-Card">
                     <div className="description">
-                        
+                        <div>
+
                         <TextField 
                             placeholder="Write any message for the patient"
                             label="Remarks"
@@ -81,6 +82,9 @@ const AppointmentRequestCard = (props) => {
                             onChange={handleRemarks}
                             
                          />  
+                        </div>
+                        <div style={{marginTop:"10px"}}>
+
                         <TextField 
                             placeholder="Meet Link for the appointment"
                             label="Appointment Link"
@@ -91,6 +95,7 @@ const AppointmentRequestCard = (props) => {
                             onChange={handleLink}
                             
                          />  
+                        </div>
                     </div>
                     <div className="Date-Time">
                         <h3>Select a Preferable Date and Time</h3>
