@@ -24,7 +24,8 @@ const Login = () => {
     }
 
     const login = () => {
-        axios.post("http://localhost:9002/Login", user)
+        if (user.email && user.password) {
+            axios.post("http://localhost:9002/Login", user)
             .then((res) => {
                 if (res.data.user) {
                     localStorage.setItem('token', res.data.user._id)
@@ -45,6 +46,10 @@ const Login = () => {
                     alert(res.data.message)
                 }
             })
+        } else {
+            alert("Please fill in the Login Details to sign in")
+        }
+        
     }
     const  reg = () => {
         navigate("/register")
@@ -52,8 +57,8 @@ const Login = () => {
     return (
         <div className="login">
             <h1>Login</h1>
-            <input type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>
-            <input type="password" name="password" value={user.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
+            <input autoComplete="off" type="text" name="email" value={user.email} onChange={handleChange} placeholder="Enter your Email"></input>
+            <input autoComplete="off" type="password" name="password" value={user.password} onChange={handleChange}  placeholder="Enter your Password" ></input>
             <div className="button" onClick={login}>Login</div>
             <div>or</div>
             <div className="button" onClick={reg}>Register</div>
