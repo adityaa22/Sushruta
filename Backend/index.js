@@ -16,7 +16,7 @@ const BookAppointment = require('./routers/BookAppointment.route')
 const AppointmentRequest = require('./routers/AppointmentRequest.route')
 const AcceptRequest = require('./routers/AcceptRequest.route')
 const ActiveAppointmentUser = require('./routers/ActiveAppointmentUser.route')
-// const RejectRequest = require('./routers/RejectRequest.route')
+const RejectRequest = require('./routers/RejectRequest.route')
 
 
 dotenv.config()
@@ -38,7 +38,7 @@ app.use('/Book-appointment',BookAppointment)
 app.use('/appointment-request',AppointmentRequest)
 app.use('/accept-request',AcceptRequest)
 app.use('/active-appointment-user',ActiveAppointmentUser)
-// app.use('/reject-request',RejectRequest)
+app.use('/reject-request',RejectRequest)
 
 
 mongoose.connect(process.env.MONGO_URL, {

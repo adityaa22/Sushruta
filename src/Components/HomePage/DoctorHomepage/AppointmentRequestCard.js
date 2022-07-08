@@ -35,7 +35,7 @@ const AppointmentRequestCard = (props) => {
             .catch(err=>console.log(err))
     }
     const Reject = () => {
-        axios.post("http://localhost:9002/accept-request", RJpostobj).
+        axios.post("http://localhost:9002/reject-request", RJpostobj).
             then(window.location.reload(false))
             .catch(err=>console.log(err))
     }
